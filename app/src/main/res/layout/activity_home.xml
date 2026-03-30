@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1F2041"
+    tools:context=".screens.HomeActivity">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="vertical"
+        android:background="#2A2B4A"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ZappaTrack"
+            android:textColor="#FFC857"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Main Navigation Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Profile Button -->
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="👤 My Profile"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:backgroundTint="#2A2B4A"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Search Button -->
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="🔍 Search Users &amp; Lighters"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:backgroundTint="#2A2B4A"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Leaderboards Button -->
+        <Button
+            android:id="@+id/leaderboardsButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="🏆 Leaderboards"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:backgroundTint="#2A2B4A"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Friends Button -->
+        <Button
+            android:id="@+id/friendsButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="⭐ Friends &amp; Favorites"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:backgroundTint="#2A2B4A"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Add Lighter Button (Emphasized) -->
+        <Button
+            android:id="@+id/addLighterButton"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="➕ Add New Lighter"
+            android:textColor="#1F2041"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FFC857"
+            android:layout_marginBottom="12dp"/>
+
+    </LinearLayout>
+
+    <!-- Sign Out Button at the bottom -->
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Sign Out"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:backgroundTint="#EF3E36"
+        android:layout_margin="16dp"/>
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
+
+    <!-- Top Bar with Back Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#2A2B4A"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp">
+
+        <TextView
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="←"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add New Lighter"
+            android:textColor="#FFC857"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Lighter Name Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lighter Name"
+                android:textColor="#FFC857"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Lighter Name Input -->
+            <EditText
+                android:id="@+id/lighterNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter lighter name"
+                android:textColor="@android:color/white"
+                android:textColorHint="#888888"
+                android:backgroundTint="#FFC857"
+                android:inputType="text"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Lighter Description Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="#FFC857"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Lighter Description Input -->
+            <EditText
+                android:id="@+id/lighterDescriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter description (optional)"
+                android:textColor="@android:color/white"
+                android:textColorHint="#888888"
+                android:backgroundTint="#FFC857"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:maxLines="5"
+                android:gravity="top"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Image Upload Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Photo (Optional)"
+                android:textColor="#FFC857"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Selected Image Preview -->
+            <ImageView
+                android:id="@+id/selectedImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="#2A2B4A"
+                android:padding="2dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"/>
+
+            <!-- Image Upload Button -->
+            <Button
+                android:id="@+id/uploadImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📷 Add Photo (Optional)"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#EF3E36"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/saveLighterButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Save Lighter"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:backgroundTint="#FFC857"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Progress Bar -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:indeterminateTint="#FFC857"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
